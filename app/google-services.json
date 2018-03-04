@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "709989025527",
+    "firebase_url": "https://schedulerapp-c5407.firebaseio.com",
+    "project_id": "schedulerapp-c5407",
+    "storage_bucket": "schedulerapp-c5407.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709989025527:android:e0fb191e867bbcd1",
+        "android_client_info": {
+          "package_name": "com.example.ixilureazura.schedulerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709989025527-limtknu7d025qfqas1caf6pv0otlrsvm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZHieCii9pKJ0-rnUHU6JFgp3eW-Trpj0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

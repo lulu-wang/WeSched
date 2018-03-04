@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Scheduler</string>
+    <string name="title_calendar">Calendar</string>
+    <string name="title_events">Events</string>
+    <string name="title_tasks">Tasks</string>
+    <string name="enter_event_name_view">Event Name</string>
+    <string name="enter_event_details_view">Event Details</string>
+    <string name="enter_time_view">Time</string>
+    <string name="enter_event_time_view">Event Time</string>
+    <string name="create_event_button_text">Create Event</string>
+    <string name="colon">:</string>
+    <string name="enter_event_date_text">Event Date</string>
+    <string name="create_event_text_view">Create Event</string>
+</resources>

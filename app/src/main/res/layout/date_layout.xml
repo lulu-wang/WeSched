@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@drawable/ic_launcher_background"
+    android:backgroundTint="@color/colorGrey"
+    android:padding="50dp">
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_arrow_back_black_24dp"
+        android:id="@+id/back_button"/>
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="50dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:fontFamily="sans-serif-condensed"
+        android:text="+"
+        android:layout_gravity="right"
+        android:textSize="24sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="110dp"
+        android:paddingTop="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/ic_launcher_background"
+        android:backgroundTint="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Month"
+            android:textSize="20dp"
+            android:id="@+id/month_text_view"
+            android:layout_gravity="center"
+            android:textColor="@color/colorLight"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/cabin"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="110dp"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp"
+        android:background="@drawable/ic_launcher_background"
+        android:backgroundTint="@color/colorLight">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textSize="30dp"
+            android:id="@+id/date_text_view"
+            android:fontFamily="@font/cabin"
+            android:textColor="@color/colorPrimaryDark"/>
+    </LinearLayout>
+
+
+</LinearLayout>
