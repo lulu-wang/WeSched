@@ -15,42 +15,58 @@
     android:id="@+id/parent">
 
     <Button
+        android:id="@+id/back_button"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/ic_arrow_back_black_24dp"
-        android:id="@+id/back_button"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.015"
+        android:backgroundTint="@color/colorPrimaryDark"/>
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:fontFamily="@font/cabin"
         android:paddingBottom="20dp"
         android:text="@string/create_event_text_view"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="308dp"
+        android:layout_height="461dp"
+        android:layout_gravity="left"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/ic_launcher_background"
+        android:backgroundTint="@color/colorLight"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_margin="10dp"
-        android:padding="20dp"
-        android:background="@drawable/ic_launcher_background"
-        android:backgroundTint="@color/colorLight"
-        android:orientation="vertical"
-        android:gravity="left"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintVertical_bias="0.911">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -68,7 +84,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorPrimaryDark"
-                android:fontFamily="@font/cabin"/>
+                android:fontFamily="@font/cabin" />
 
         </LinearLayout>
 
@@ -89,7 +105,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorPrimaryDark"
-                android:fontFamily="@font/cabin"/>
+                android:fontFamily="@font/cabin" />
 
         </LinearLayout>
 
@@ -115,8 +131,8 @@
                     android:id="@+id/event_date_edit_month"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:padding="5dp"
-                    android:backgroundTint="@color/colorPrimaryDark">
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:padding="5dp">
 
                 </Spinner>
 
@@ -124,8 +140,8 @@
                     android:id="@+id/event_date_edit_day"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:padding="5dp"
-                    android:backgroundTint="@color/colorPrimaryDark">
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:padding="5dp">
 
                 </Spinner>
 
@@ -133,8 +149,8 @@
                     android:id="@+id/event_date_edit_year"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:padding="5dp"
-                    android:backgroundTint="@color/colorPrimaryDark">
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:padding="5dp">
 
                 </Spinner>
 
@@ -145,9 +161,9 @@
                 android:id="@+id/event_time_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/roboto"
                 android:paddingBottom="20dp"
-                android:layout_marginTop="10dp"
                 android:text="@string/enter_event_time_view" />
 
             <LinearLayout
@@ -160,8 +176,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:padding="5dp"
-                    android:backgroundTint="@color/colorPrimaryDark">
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:padding="5dp">
 
                 </Spinner>
 
@@ -169,16 +185,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/colon"
-                    android:textSize="20dp"
-                    android:textColor="@color/colorPrimary"/>
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20dp" />
 
                 <Spinner
                     android:id="@+id/event_time_edit_minute"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:padding="5dp"
-                    android:backgroundTint="@color/colorPrimaryDark">
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:padding="5dp">
 
                 </Spinner>
 
@@ -186,8 +202,8 @@
                     android:id="@+id/event_time_edit_apm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:backgroundTint="@color/colorPrimaryDark">
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:padding="5dp">
 
                 </Spinner>
 
@@ -205,38 +221,73 @@
             <android.support.v7.widget.AppCompatImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:background="@drawable/ic_phone_black_24dp"
-                android:backgroundTint="@color/colorPrimary"
+                android:layout_marginBottom="20dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"/>
+                android:background="@drawable/ic_phone_black_24dp"
+                android:backgroundTint="@color/colorPrimary" />
 
             <EditText
+                android:id="@+id/phone_number_edit_text"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:id="@+id/phone_number_edit_text"
-                android:fontFamily="@font/cabin"/>
+                android:fontFamily="@font/cabin" />
 
             <Button
+                android:id="@+id/add_number_button"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="7dp"
                 android:backgroundTint="@color/colorAccent"
-                android:text="+"
-                android:id="@+id/add_number_button"/>
+                android:text="+" />
 
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:text="@string/remind_text_view" />
+
+            <Spinner
+                android:id="@+id/remind_edit_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:padding="5dp">
+
+            </Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:text=" before event" />
+
+        </LinearLayout>
+
         <Button
+            android:id="@+id/create_event_button_view"
             android:layout_width="200dp"
             android:layout_height="60dp"
             android:layout_marginRight="50dp"
             android:layout_marginTop="10dp"
-            android:text="@string/create_event_button_text"
-            android:id="@+id/create_event_button_view"
             android:backgroundTint="@color/colorAccent"
-            android:textSize="14dp"/>
+            android:text="@string/create_event_button_text"
+            android:textSize="14dp" />
 
 
     </LinearLayout>

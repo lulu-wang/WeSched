@@ -20,6 +20,12 @@
         </activity>
 
         <activity
+            android:name=".Screen1"
+            android:label="Start App"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <activity
             android:name=".SecondScreen"
             android:label="Create Event"
             android:theme="@style/AppTheme">

@@ -17,6 +17,7 @@ import android.widget.Spinner;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -30,6 +31,7 @@ public class SecondScreen extends Activity {
     private Spinner monthDrop;
     private Spinner dayDrop;
     private Spinner yearDrop;
+    private Spinner remindDrop;
 
     private String eventName;
     private String eventDesc;
@@ -47,12 +49,16 @@ public class SecondScreen extends Activity {
                                 22, 23, 24, 25, 26, 27, 28, 29, 30};
     private int[] yearArray = {2017, 2018, 2019, 2020};
 
+    private String[] remindTimes = {"0 minutes", "5 minutes", "10 minutes", "15 minutes", "20 minutes",
+            "25 minutes", "30 minutes", "35 minutes", "40 minutes", "45 minutes", "50 minutes", "55 minutes", "1 hour"};
+
     private String hourDropSel;
     private String minuteDropSel;
     private String apmDropSel;
     private String monthsDropSel;
     private String daysDropSel;
     private String yearDropSel;
+    private String remindDropSel;
     private ArrayList<String> phoneNumberArray;
 
     @Override
@@ -68,6 +74,7 @@ public class SecondScreen extends Activity {
         monthDrop = findViewById(R.id.event_date_edit_month);
         dayDrop = findViewById(R.id.event_date_edit_day);
         yearDrop = findViewById(R.id.event_date_edit_year);
+        remindDrop = findViewById(R.id.remind_edit_spinner);
 
         final EditText evName = (EditText) findViewById(R.id.event_name_edit_text);
 
@@ -87,13 +94,15 @@ public class SecondScreen extends Activity {
         final ArrayList<String> days = new ArrayList<>();
         final ArrayList<String> years = new ArrayList<>();
 
+        final ArrayList<String> remindTimeAL = new ArrayList<>();
+
         phoneNumberArray = new ArrayList<>();
 
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SecondScreen.this, MainActivity.class));
+                startActivity(new Intent(SecondScreen.this, Screen1.class));
             }
         });
 
@@ -138,7 +147,12 @@ public class SecondScreen extends Activity {
                 //year
                 yearDropSel = yearDrop.getSelectedItem().toString();
 
-                Event e = new Event (yearDropSel, monthsDropSel, daysDropSel, hourDropSel, minuteDropSel, apmDropSel, eventName, eventDesc);
+                //remind time
+                remindDropSel = remindDrop.getSelectedItem().toString();
+                int reminderInt = (remindTimeAL.indexOf(remindDropSel)) * 5;
+
+                Event e = new Event (yearDropSel, monthsDropSel, daysDropSel, hourDropSel, minuteDropSel,
+                        apmDropSel, eventName, eventDesc, reminderInt);
                 phoneNumber = pN.getText().toString();
                 if (!phoneNumberArray.contains(phoneNumber)) {
                     phoneNumberArray.add(phoneNumber);
@@ -215,6 +229,16 @@ public class SecondScreen extends Activity {
         adapter_year.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         yearDrop.setAdapter(adapter_year);
         //end fill date section
+
+        //fill reminder times section
+        for (String s: remindTimes) {
+            remindTimeAL.add(s);
+        }
+
+        ArrayAdapter<String> adapter_reminders = new ArrayAdapter<>(
+                this, android.R.layout.simple_spinner_item, remindTimeAL);
+        adapter_reminders.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        remindDrop.setAdapter(adapter_reminders);
 
     }
 

@@ -21,11 +21,12 @@ public class Event {
     private String name;
     private String desc;
     private Date dateTime;
+    private int remindTime;
     private ArrayList<String> phoneNumberArray;
 
     private String hasMsged;
 
-    public Event(String year, String month, String day, String hour, String minute, String apm, String name, String desc) {
+    public Event(String year, String month, String day, String hour, String minute, String apm, String name, String desc, int remindTime) {
         this.year = year;
         this.month = month;
         this.day = day;
@@ -34,6 +35,7 @@ public class Event {
         this.apm = apm;
         this.name = name;
         this.desc = desc;
+        this.remindTime = remindTime;
         this.hasMsged = "false";
 
         dateTime = new Date();
@@ -48,7 +50,7 @@ public class Event {
 
     }
 
-    public Event(String year, String month, String day, String hour, String minute, String apm, String name) {
+    public Event(String year, String month, String day, String hour, String minute, String apm, String name, int remindTime) {
         this.year = year;
         this.month = month;
         this.day = day;
@@ -56,6 +58,7 @@ public class Event {
         this.minute = minute;
         this.apm = apm;
         this.name = name;
+        this.remindTime = remindTime;
         this.hasMsged = "false";
 
         dateTime = new Date();
@@ -108,6 +111,10 @@ public class Event {
 
     public void setHasMsged(String tF) {
         this.hasMsged = tF;
+    }
+
+    public int getRemindTime() {
+        return this.remindTime;
     }
 
 }

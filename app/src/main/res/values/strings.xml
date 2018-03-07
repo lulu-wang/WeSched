@@ -11,4 +11,7 @@
     <string name="colon">:</string>
     <string name="enter_event_date_text">Event Date</string>
     <string name="create_event_text_view">Create Event</string>
+    <string name="remind_text_view">Reminder</string>
+    <string name="event_minutes_txt">minutes before event</string>
+    <string name="collab_sched_text_view">Collaborative scheduling</string>
 </resources>
